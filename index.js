@@ -1,8 +1,15 @@
 
 
-var OpenTok = require('opentok'),
+/*var OpenTok = require('opentok'),
     opentok = new OpenTok(45250532,'54afc8f4b42cbec283a979313eea14ea398fb221');
+*/    
+var express = require('express');
+var app = express();
 
+app.get('/', function(request, response){
+    response.sendfile('sample.html');
+});
+/*
 // Create a session that will attempt to transmit streams directly between
 // clients. If clients cannot connect, the session uses the OpenTok TURN server:
 opentok.createSession(function(err, session) {
@@ -30,4 +37,4 @@ publisher = opentok.initPublisher(targetElement, null, function(error) {
 
 
 });
-
+*/
